@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     // Outlets, constants, and variables defined here will be available for use anywhere below.
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var labelOutput: UILabel!
+    @IBOutlet weak var kmInput: UITextField!
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: Methods
     // This method runs once when the view is loaded.
@@ -65,7 +67,21 @@ class ViewController: UIViewController {
             , height: labelOutput.frame.size.height)
 
     }
+    
 
-
+    @IBAction func displayCities(_ sender: Any) {
+        
+        guard let kmInputAsString = kmInput.text, kmInput.text == nil else{
+            titleLabel.text = "Enter a Value"
+            return
+        }
+        
+        guard let kmInputAsDouble = Double(kmInputAsString) else{
+            titleLabel.text = "Enter a Value"
+            return
+        }
+        
+    }
+        
 }
 
