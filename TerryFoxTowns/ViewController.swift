@@ -81,6 +81,17 @@ class ViewController: UIViewController {
             return
         }
         
+        switch kmInputAsDouble {
+        case 5_373 :
+            appendToLabel(this: "Thunder Bay, ON")
+            fallthrough
+        case 5_153...5_373 :
+            appendToLabel(this: "Terrace Bay, ON")
+            fallthrough
+        default:
+            return
+        }
+        
     }
         
 }
