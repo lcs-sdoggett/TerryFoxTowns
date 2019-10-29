@@ -42,6 +42,13 @@ class ViewController: UIViewController {
         
     }
     
+    func prependToLabel(this newText: String) {
+        
+        labelOutput.text! = newText + "\n" + labelOutput.text!
+        
+    }
+
+    
     // This function resets the contents of the label
     func resetLabel() {
         
@@ -71,23 +78,72 @@ class ViewController: UIViewController {
 
     @IBAction func displayCities(_ sender: Any) {
         
-        guard let kmInputAsString = kmInput.text, kmInput.text == nil else{
+        guard let kmInputAsString = kmInput.text else{
             titleLabel.text = "Enter a Value"
             return
         }
         
-        guard let kmInputAsDouble = Double(kmInputAsString) else{
+        guard let kmInputAsDouble = Int(kmInputAsString) else{
             titleLabel.text = "Enter a Value"
             return
         }
+        
+        titleLabel.text = "The Terry Fox Legacy"
+        
+        resetLabel()
         
         switch kmInputAsDouble {
-        case 5_373 :
-            appendToLabel(this: "Thunder Bay, ON")
+        case 5373...Int.max:
+            prependToLabel(this: "Thunder Bay, ON")
             fallthrough
-        case 5_153...5_373 :
-            appendToLabel(this: "Terrace Bay, ON")
+        case 5153...Int.max:
+            prependToLabel(this: "Terrace Bay, ON")
             fallthrough
+        case 4901...Int.max:
+            prependToLabel(this: "Wawa, ON")
+            fallthrough
+        case 4675...Int.max:
+            prependToLabel(this: "Sault Ste. Marie, ON")
+            fallthrough
+        case 4430...Int.max:
+            prependToLabel(this: "Sudbury, ON")
+            fallthrough
+        case 4153...Int.max:
+            prependToLabel(this: "Gravenhurst, ON")
+            fallthrough
+        case 3622...Int.max:
+            prependToLabel(this: "Hamilton, ON")
+            fallthrough
+        case 3523...Int.max:
+            prependToLabel(this: "Toronto, ON")
+            fallthrough
+        case 3508...Int.max:
+            prependToLabel(this: "Scarborough Civic Centre, ON")
+            fallthrough
+        case 3488...Int.max:
+            prependToLabel(this: "Millbrook, ON")
+            prependToLabel(this: "Pickering, ON")
+            fallthrough
+        case 3123...Int.max:
+            prependToLabel(this: "Ottawa, ON")
+            fallthrough
+        case 3113...Int.max:
+            prependToLabel(this: "Just outside of Ottawa")
+            fallthrough
+        case 3030...Int.max:
+            prependToLabel(this: "Hawkesbury, ON")
+            fallthrough
+        case 2917...Int.max:
+            prependToLabel(this: "Montreal, QC")
+            fallthrough
+        
+
+
+
+            
+
+
+
         default:
             return
         }
