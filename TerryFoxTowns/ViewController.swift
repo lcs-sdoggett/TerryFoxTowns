@@ -101,89 +101,89 @@ class ViewController: UIViewController {
         
         resetLabel()
         
-        // Switch statement 
+        // Switch statement
         switch kmInputAsInt {
-        case 5373...Int.max:
+        case 5373...:
             prependToLabel(this: "Thunder Bay, ON")
             fallthrough
-        case 5153...Int.max:
+        case 5153...:
             prependToLabel(this: "Terrace Bay, ON")
             fallthrough
-        case 4901...Int.max:
+        case 4901...:
             prependToLabel(this: "Wawa, ON")
             fallthrough
-        case 4675...Int.max:
+        case 4675...:
             prependToLabel(this: "Sault Ste. Marie, ON")
             fallthrough
-        case 4430...Int.max:
+        case 4430...:
             prependToLabel(this: "Sudbury, ON")
             fallthrough
-        case 4153...Int.max:
+        case 4153...:
             prependToLabel(this: "Gravenhurst, ON")
             fallthrough
-        case 3622...Int.max:
+        case 3622...:
             prependToLabel(this: "Hamilton, ON")
             fallthrough
-        case 3523...Int.max:
+        case 3523...:
             prependToLabel(this: "Toronto, ON")
             fallthrough
-        case 3508...Int.max:
+        case 3508...:
             prependToLabel(this: "Scarborough Civic Centre, ON")
             fallthrough
-        case 3488...Int.max:
+        case 3488...:
             prependToLabel(this: "Millbrook, ON")
             prependToLabel(this: "Pickering, ON")
             fallthrough
-        case 3123...Int.max:
+        case 3123...:
             prependToLabel(this: "Ottawa, ON")
             fallthrough
-        case 3113...Int.max:
+        case 3113...:
             prependToLabel(this: "Just outside of Ottawa")
             fallthrough
-        case 3030...Int.max:
+        case 3030...:
             prependToLabel(this: "Hawkesbury, ON")
             fallthrough
-        case 2917...Int.max:
+        case 2917...:
             prependToLabel(this: "Montreal, QC")
             fallthrough
-        case 2663...Int.max:
+        case 2663...:
             prependToLabel(this: "Quebec City, QC")
             fallthrough
-        case 2592...Int.max:
+        case 2592...:
             prependToLabel(this: "Highway 20, QC")
             fallthrough
-        case 2426...Int.max:
+        case 2426...:
             prependToLabel(this: "Highway 185, QC")
             fallthrough
-        case 2256...Int.max:
+        case 2256...:
             prependToLabel(this: "Perth-Andover, NB")
             fallthrough
-        case 2214...Int.max:
+        case 2214...:
             prependToLabel(this: "Bristol, NB")
             fallthrough
-        case 1865...Int.max:
+        case 1865...:
             prependToLabel(this: "Highway 2, west of Moncton, NB")
             fallthrough
-        case 1728...Int.max:
+        case 1728...:
             prependToLabel(this: "Charlottetown, PEI")
             fallthrough
-        case 1373...Int.max:
+        case 1373...:
             prependToLabel(this: "Dartmouth, NS")
             fallthrough
-        case 1278...Int.max:
+        case 1278...:
             prependToLabel(this: "Highway 7, NS")
             prependToLabel(this: "Sheet Harbour, NS")
             fallthrough
-        case 882...Int.max:
+        case 882...:
             prependToLabel(this: "Port-Aux-Basques, NF")
             fallthrough
-        case 542...Int.max:
+        case 542...:
             prependToLabel(this: "South Brook Junction, NF")
             fallthrough
-        case 346...Int.max:
+        case 346...:
             prependToLabel(this: "Gander, NF")
             fallthrough
-        case 0...Int.max:
+        case 0...:
             prependToLabel(this: "St. John’s, NF")
             fallthrough
         default:
