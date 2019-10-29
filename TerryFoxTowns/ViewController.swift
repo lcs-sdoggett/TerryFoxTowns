@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         
     }
     
+    // Add text to end of the existing label
     func prependToLabel(this newText: String) {
         
         labelOutput.text! = newText + "\n" + labelOutput.text!
@@ -76,21 +77,32 @@ class ViewController: UIViewController {
 
     @IBAction func displayCities(_ sender: Any) {
         
+        // Set title label to "Type a Number" if can't be converted
+        // If it can be converted, convert it
         guard let kmInputAsString = kmInput.text else{
-            titleLabel.text = "Enter a Value"
+            titleLabel.text = "Type a Number"
             return
         }
         
-        guard let kmInputAsDouble = Int(kmInputAsString) else{
-            titleLabel.text = "Enter a Value"
+        // Set title label to "Type a Number" if can't be converted
+        // If it can be converted, convert it
+        guard let kmInputAsInt = Int(kmInputAsString) else{
+            titleLabel.text = "Type a Number"
             return
         }
         
+        // Set title label to "Type a Positive Number" if the number is less then 0
+        if kmInputAsInt > 0 {
+            titleLabel.text = "Type a Positive Number"
+        }
+        
+        // Set Title Label Back
         titleLabel.text = "The Terry Fox Legacy"
         
         resetLabel()
         
-        switch kmInputAsDouble {
+        // Switch statement 
+        switch kmInputAsInt {
         case 5373...Int.max:
             prependToLabel(this: "Thunder Bay, ON")
             fallthrough
