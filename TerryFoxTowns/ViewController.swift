@@ -27,10 +27,8 @@ class ViewController: UIViewController {
         resetLabel()
         
         // Add a few lines of text
-        appendToLabel(this: "Sunaina")
-        appendToLabel(this: "Wellesley")
-        appendToLabel(this: "Frisbee")
-    }
+        appendToLabel(this: "Enter A Value")
+        }
     
     // Add to the content of the label
     // Use this function to add a new city to the label
@@ -136,14 +134,46 @@ class ViewController: UIViewController {
         case 2917...Int.max:
             prependToLabel(this: "Montreal, QC")
             fallthrough
-        
-
-
-
-            
-
-
-
+        case 2663...Int.max:
+            prependToLabel(this: "Quebec City, QC")
+            fallthrough
+        case 2592...Int.max:
+            prependToLabel(this: "Highway 20, QC")
+            fallthrough
+        case 2426...Int.max:
+            prependToLabel(this: "Highway 185, QC")
+            fallthrough
+        case 2256...Int.max:
+            prependToLabel(this: "Perth-Andover, NB")
+            fallthrough
+        case 2214...Int.max:
+            prependToLabel(this: "Bristol, NB")
+            fallthrough
+        case 1865...Int.max:
+            prependToLabel(this: "Highway 2, west of Moncton, NB")
+            fallthrough
+        case 1728...Int.max:
+            prependToLabel(this: "Charlottetown, PEI")
+            fallthrough
+        case 1373...Int.max:
+            prependToLabel(this: "Dartmouth, NS")
+            fallthrough
+        case 1278...Int.max:
+            prependToLabel(this: "Highway 7, NS")
+            prependToLabel(this: "Sheet Harbour, NS")
+            fallthrough
+        case 882...Int.max:
+            prependToLabel(this: "Port-Aux-Basques, NF")
+            fallthrough
+        case 542...Int.max:
+            prependToLabel(this: "South Brook Junction, NF")
+            fallthrough
+        case 346...Int.max:
+            prependToLabel(this: "Gander, NF")
+            fallthrough
+        case 0...Int.max:
+            prependToLabel(this: "St. John’s, NF")
+            fallthrough
         default:
             return
         }
